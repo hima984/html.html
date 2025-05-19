@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Portfolio</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #e6f3ff, #fff7e6);
+    }
+    header {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: subtle-bounce 1.5s ease-in-out infinite;
+    }
+    nav {
+      background: #1e1b4b;
+      padding: 1rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #f59e0b;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+    .progress-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .progress-card {
+      background: #fefce8;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .progress-card:hover, .progress-card:focus {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    .progress-card h3 {
+      color: #1e3a8a;
+      margin: 0 0 0.5rem;
+    }
+    footer {
+      background: #1e1b4b;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+    }
+    h2 {
+      color: #1e3a8a;
+    }
+    @keyframes subtle-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HTML Portfolio</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#home" aria-current="page">Home</a></li>
+      <li><a href="#progress">Progress</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="home">
+      <h2>Welcome to My Portfolio</h2>
+      <p>I have successfully completed the HTML curriculum on freeCodeCamp, covering basic HTML, semantic HTML, and accessibility-focused HTML. This website demonstrates my proficiency in creating structured, accessible web pages. My next goal is to master CSS to enhance my front-end development skills.</p>
+    </section>
+    <section id="progress" role="region" aria-labelledby="progress-heading">
+      <h2 id="progress-heading">freeCodeCamp Achievements</h2>
+      <div class="progress-container">
+        <div class="progress-card" tabindex="0">
+          <h3>Basic HTML</h3>
+          <p>Mastered core HTML elements, including tags for text, images, links, and forms.</p>
+        </div>
+        <div class="progress-card" tabindex="0">
+          <h3>Semantic HTML</h3>
+          <p>Learned to use semantic elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; for better structure and SEO.</p>
+        </div>
+        <div class="progress-card" tabindex="0">
+          <h3>Accessibility HTML</h3>
+          <p>Acquired skills in ARIA roles, accessible forms, meta tags, and keyboard navigation to ensure inclusivity.</p>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am an aspiring web developer with a strong foundation in HTML, gained through freeCodeCamp's comprehensive curriculum. I am committed to continuous learning and excited to begin studying CSS to create visually appealing websites.</p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Connect with me on <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp</a> to follow my learning journey.</p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 HTML Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
